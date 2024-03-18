@@ -46,6 +46,36 @@ The repository includes `.bat` files for Windows users and `.sh` files for Unix/
 3. Edit the `INPUT_DIR` and `OUTPUT_DIR` variables in your chosen `.sh` file to specify your input and output directories.
 4. Run the script with `./convert_to_parquet.sh` or `./merge_parquet.sh`.
 
+## Testing
+
+This project includes a comprehensive set of unit tests to ensure that the conversion and merging functionalities work as expected. The tests are located in the `test_file_conversion.py` file.
+
+Before running the tests, ensure you have all the necessary requirements installed by running:
+
+```
+pip install pandas tqdm
+```
+
+To run the tests, navigate to the project directory and execute the following command:
+
+### For Windows:
+```
+python -m unittest test_file_conversion.py
+```
+
+### For Unix/Linux/Mac:
+If you're using a Unix-like operating system, the command remains the same:
+```
+python3 -m unittest test_file_conversion.py
+```
+
+This command will automatically discover and run all the tests defined in `test_file_conversion.py`, and you will see the output indicating whether the tests passed or if there were any failures.
+
+Running these tests is a crucial step in ensuring the reliability and correctness of the scripts before using them in a production environment, especially when working with large datasets.
+
+
+
+
 ## Contributing
 
 Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
